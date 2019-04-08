@@ -119,7 +119,7 @@ use sakila;
 	join inventory i on r.inventory_id = i.inventory_id
 	join film_category f on i.film_id = f.film_id
 	join category c on f.category_id = c.category_id
-	group by c.name asc order by total_rental_amount desc*/
+	group by c.name asc order by total_rental_amount desc LIMIT 5*/
     
 -- In your new role as an executive, you would like to have an easy way of viewing the Top five genres by gross revenue. Use the solution from the problem above to create a view. If you haven't solved 7h, you can substitute another query to create a view.
 	/*CREATE 
@@ -144,4 +144,4 @@ use sakila;
 	-- SELECT * FROM sakila.top_five_genres;
 
 -- You find that you no longer need the view top_five_genres. Write a query to delete it.
-	-- DROP VIEW sakila.top_five_genres; 
+	-- DROP VIEW sakila.top_five_genres
